@@ -34,7 +34,7 @@ ignore = []
 
 [serve]
 # The address to serve on.
-addresses = ["0.0.0.0", "lunadev.online"]
+addresses = ["0.0.0.0"]
 # The port to serve on.
 port = 3000
 # Aliases to serve, typically found in an /etc/hosts file.
