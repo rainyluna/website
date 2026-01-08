@@ -1,0 +1,287 @@
+@font-face {
+  font-family: 'Sue Ellen Francisco';
+  src: url('/public/SueEllenFrancisco.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* No scrollbars */
+  background-color: #000;
+}
+
+/* LAYER 1: The Dark Grunge Background */
+.background-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* Lowest layer */
+
+  /* Put your dark texture file here */
+  background-image: url('/public/background.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* Lowest layer */
+
+  /* Put your dark texture file here */
+  background-image: url('/public/404.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* LAYER 2: The Colorful Front Art */
+.foreground-art {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* Middle layer */
+
+  /* Makes the image fill the screen but keep its aspect ratio */
+  object-fit: cover;
+  /* Centers the image */
+  object-position: center;
+
+  /* IMPORTANT: This lets you click "through" the art if needed */
+  pointer-events: none;
+}
+
+/* LAYER 3: The Navigation */
+nav {
+  position: absolute;
+  /* Fixes it to the top right */
+  top: 0;
+  right: 0;
+  padding-top: 50px;
+  padding-right: 80px;
+  z-index: 3;
+  /* Top layer */
+
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.separator {
+  margin: 0 10px;
+  color: #555;
+}
+
+.center_404 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text_404 {
+  color: #aaa;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: max-width;
+  z-index: 4;
+  font-family: 'Sue Ellen Francisco', serif;
+  color: #aaa;
+  font-size: 3rem;
+  /* Top layer */
+}
+
+/* ========== PAGE STYLES ========== */
+
+.page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.background-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: url('/public/background.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 80px 60px 80px;
+  color: #ccc;
+  font-family: 'Sue Ellen Francisco', serif;
+  font-size: 2.5rem;
+}
+
+.page-title {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* About page */
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Projects page */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #555;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.project-card-link {
+  display: block;
+  font-size: 2.4rem;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.project-card-link:hover {
+  color: #aaa;
+}
+
+.project-card p {
+  color: #888;
+  margin-bottom: 0;
+}
+
+/* Contact page */
+.contact-text p {
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  font-size: 4rem;
+}
+
+.contact-links li {
+  margin-bottom: 15px;
+}
+
+.contact-links a,
+.contact-link {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+
+.contact-links a:hover,
+.contact-link:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  nav {
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+
+  .separator {
+    margin: 0 5px;
+  }
+
+  .overlay-text {
+    font-size: 2rem;
+  }
+
+  .page-content {
+    padding: 100px 20px 40px 20px;
+    font-size: 1.8rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .overlay-text {
+    font-size: 1.5rem;
+  }
+}
