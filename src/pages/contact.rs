@@ -10,7 +10,7 @@ pub fn Contact() -> impl IntoView {
                 <h1 class="page-title">"Contact"</h1>
                 <div class="contact-text">
                     <p>"Reach me:"</p>
-                    <a class="contact-link" href="mailto:rainylunanight@proton.me">
+                    <a class="contact-link" href="mailto:luna@uwu.chat">
                         "Email (click)"
                     </a>
 
