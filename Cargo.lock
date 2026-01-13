@@ -986,21 +986,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
-name = "lunadev-online"
-version = "0.1.0"
-dependencies = [
- "console_error_panic_hook",
- "console_log",
- "leptos",
- "leptos_meta",
- "leptos_router",
- "log",
- "wasm-bindgen",
- "wasm-bindgen-test",
- "web-sys",
-]
-
-[[package]]
 name = "manyhow"
 version = "0.11.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1870,6 +1855,21 @@ dependencies = [
  "getrandom",
  "js-sys",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "uwu-chat"
+version = "0.1.0"
+dependencies = [
+ "console_error_panic_hook",
+ "console_log",
+ "leptos",
+ "leptos_meta",
+ "leptos_router",
+ "log",
+ "wasm-bindgen",
+ "wasm-bindgen-test",
+ "web-sys",
 ]
 
 [[package]]

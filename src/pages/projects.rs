@@ -19,7 +19,7 @@ pub fn Projects() -> impl IntoView {
                     <div class="project-card">
                         <h3>"Sabana Market Site"</h3>
                         <a
-                            href="https://clientes.sabanamarket.com/?ref=lunadev.online"
+                            href="https://clientes.sabanamarket.com/?ref=uwu.cha"
                             class="project-card-link"
                         >
                             "clientes.sabanamarket.com"
@@ -30,11 +30,8 @@ pub fn Projects() -> impl IntoView {
                     </div>
                     <div class="project-card">
                         <h3>"This Very Website!"</h3>
-                        <a
-                            href="https://lunadev.online/?ref=lunadev.online"
-                            class="project-card-link"
-                        >
-                            "lunadev.online"
+                        <a href="https://uwu.chat/?ref=uwu.chat" class="project-card-link">
+                            "uwu.chat"
                         </a>
                         <p>"This site! Made possible by love, leptos, rust, docker and caddy"</p>
                     </div>

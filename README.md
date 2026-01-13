@@ -25,7 +25,7 @@ cargo generate --git https://github.com/leptos-rs/start-trunk
 to generate your new project, then
 
 ```sh
-cd lunadev-online
+cd uwu-chat
 ```
 
 to go to your newly created project.

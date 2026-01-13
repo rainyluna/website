@@ -37,9 +37,9 @@ pub fn Home() -> impl IntoView {
                 >
                     "Welcome to my site"
                     <br />
-                    "I'm Luna, a Rust and"
+                    "I'm a Rust and"
                     <br />
-                    "   web developer"
+                    "web developer"
                     <br />
                     "(learning still ofc)"
                     <br />
